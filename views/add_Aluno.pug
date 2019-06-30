@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/Aluno/add')
+    .form-group
+      label Escola
+      input.form-control(name='School', type='text')
+    .form-group
+      label Sexo
+      input.form-control(name='Sex', type='text')
+    .form-group
+      label Idade
+      input.form-control(name='Age', type='text')
+    .form-group
+      label Tempo de deslocamento - 1 (15 min., 2 - 15 to 30 min., 3 - 30 min. to 1 hour, or 4 -1 hour)
+      input.form-control(name='Traveltime', type='text')
+    .form-group
+      label Estudo semanais - Por horas (numeric: 1 - 2 hours, 2 - 2 to 5 hours, 3 - 5 to 10 hours, or 4 - 10 hours)
+      input.form-control(name='Studytime', type='text')
+    .form-group
+      label Repetência
+      input.form-control(name='Failures', type='text')
+    .form-group
+      label Relação Familiar
+      input.form-control(name='Famrel', type='text')
+    br
+    input.btn.btn-primary(type='submit', value='Submit' style={'font-size': '20px', background: 'green'})
